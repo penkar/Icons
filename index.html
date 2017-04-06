@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Zentradi Symbol</title>
+		<title id="title"></title>
 	</head>
 	<body style="height: 420px;width: 420px;border: 0px;margin: 0px;">
-    <img src="./icon.svg" />
+    <img id="img"/>
+		<script type="text/javascript">
+			window.onload = function() {
+				var img = document.getElementById('img'), title = document.getElementById('title');
+				if(!window.location.hash) {
+					img.src = './icon.svg', title.innerText = "Zentradi Symbol";
+				}
+			}
+		</script>
   </body>
 </html>
